@@ -37,10 +37,15 @@ const router = new Router({
                 component: () => import('./views/Home.vue')
               },
               {
-                path: '/page2',
-                name: 'page-2',
-                component: () => import('./views/Page2.vue')
+                path: '/planets',
+                name: 'page-planets-list',
+                component: () => import('@/views/pages/planets/Planets'),
               },
+              {
+                path: '/planets/:id',
+                name: 'page-planet-overview',
+                component: () => import('@/views/pages/planets/Planet')
+              }
             ],
         },
     // =============================================================================

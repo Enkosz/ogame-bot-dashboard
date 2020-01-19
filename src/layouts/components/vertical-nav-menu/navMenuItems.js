@@ -16,9 +16,9 @@ export default [
     icon: "HomeIcon",
   },
   {
-    url: "/page2",
-    name: "Page 2",
-    slug: "page2",
+    url: "/planets",
+    name: "Planets",
+    slug: "planets",
     icon: "FileIcon",
   },
 ]
