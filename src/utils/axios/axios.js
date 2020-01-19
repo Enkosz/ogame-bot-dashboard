@@ -1,7 +1,6 @@
-// axios
 import axios from 'axios'
 
-const baseURL = ""
+const baseURL = process.env.VUE_APP_OGAMED_URL;
 
 export default axios.create({
   baseURL: baseURL
