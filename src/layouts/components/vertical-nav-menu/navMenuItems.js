@@ -21,4 +21,10 @@ export default [
     slug: "planets",
     icon: "FileIcon",
   },
+  {
+    url: "/research",
+    name: "Research",
+    slug: "research",
+    icon: "FileIcon",
+  },
 ]

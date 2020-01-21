@@ -45,6 +45,11 @@ const router = new Router({
                 path: '/planets/:id',
                 name: 'page-planet-overview',
                 component: () => import('@/views/pages/planets/Planet')
+              },
+              {
+                path: '/research',
+                name: 'page-research-list',
+                component: () => import('@/views/pages/research/Research')
               }
             ],
         },
