@@ -1,9 +1,9 @@
 import PlanetService from "@/services/api/planets/PlanetService";
 
 export default {
-  async getPlanets({ commit }) {
+  async fetchPlanets() {
     const fetchedPlanets = await PlanetService.getPlanets();
 
-    commit('SET_PLANETS', fetchedPlanets);
+    return fetchedPlanets;
   }
 }

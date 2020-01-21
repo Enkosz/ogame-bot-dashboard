@@ -1,3 +1,1 @@
-export default {
-  planets: []
-}
+export default {}
