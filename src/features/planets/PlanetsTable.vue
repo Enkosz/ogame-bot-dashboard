@@ -1,6 +1,6 @@
 <template>
-  <vs-table :data="planets">
-    <template slot="thead">
+  <main-table :data="planets" @reload="$emit('reload')" :loading="loading">
+    <template slot="tableHead">
       <vs-th>
         ID
       </vs-th>
@@ -12,7 +12,7 @@
       </vs-th>
     </template>
 
-    <template slot-scope="{data}">
+    <template slot="tableBody" slot-scope="{data}">
       <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
         <vs-td :data="data[indextr].id">
           {{data[indextr].id}}
@@ -27,17 +27,27 @@
         </vs-td>
       </vs-tr>
     </template>
-  </vs-table>
+  </main-table>
 </template>
 
 <script>
+    import MainTable from "@/layouts/ui/MainTable";
+
     export default {
         name: "PlanetsTable",
+        components: {
+          MainTable
+        },
         props: {
-          planets: {
-            type: Array,
-            required: true
-          }
-        }
+            planets: {
+              type: Array,
+              required: true
+            },
+            loading: {
+              type: Boolean,
+              default: false,
+              required: false
+            }
+          },
     }
 </script>
